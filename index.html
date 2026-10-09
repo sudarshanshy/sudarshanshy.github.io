@@ -13,7 +13,8 @@
   <meta property="og:image:alt" content="Sudarshan Shyam by the sea">
   <title>Sudarshan Shyam — Coresets, game theory &amp; fairness</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=14816f9">
+  <link rel="stylesheet" href="styles.css?v=coresets-20261009">
+  <script type="module" src="coreset-demo.mjs?v=coresets-20261009"></script>
 </head>
 <body>
   <a class="skip-link" href="#research">Skip to research</a>
@@ -50,40 +51,88 @@
         </article>
       </div>
       <p class="current-work"><span>Currently</span> Exploring the intersection of AI alignment and mechanism design, including the behavior of LLMs in markets.</p>
-      <details class="publications">
-        <summary><span>Publications</span><span class="summary-indicator" aria-hidden="true"></span></summary>
+
+      <figure id="compression" class="coreset-demo" aria-labelledby="demo-heading" aria-describedby="demo-note">
+        <div class="demo-heading-row">
+          <div>
+            <p class="eyebrow">A machine learning example · k-means</p>
+            <h3 id="demo-heading">Compress. Solve. Lift.</h3>
+          </div>
+          <button class="demo-play" type="button" aria-label="Play clustering animation" hidden>Play</button>
+        </div>
+        <p class="demo-intro">Solve a smaller problem. Bring the answer back to the full dataset.</p>
+        <div class="demo-plot-wrap">
+          <p class="demo-metric">3 cluster centers → all 180 points</p>
+          <svg class="coreset-plot" viewBox="0 0 600 330" role="img" aria-labelledby="plot-title plot-description">
+            <title id="plot-title">Compress, solve, and lift a clustering problem</title>
+            <desc id="plot-description">180 synthetic data points are summarized by 15 weighted representatives. Weighted k-means finds three cluster centers on the summary. Every original point is then assigned to its nearest learned center. Larger summary dots represent more data; plus signs mark cluster centers.</desc>
+            <g class="demo-cloud" aria-hidden="true"><circle cx="94.04" cy="138.82" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="158.40" cy="126.27" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="158.25" cy="124.60" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="190.63" cy="93.57" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="110.22" cy="139.75" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="140.04" cy="112.61" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="124.44" cy="149.55" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="142.83" cy="103.00" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="151.95" cy="117.81" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="116.93" cy="117.81" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="186.18" cy="121.83" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="187.29" cy="105.14" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="144.84" cy="137.50" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="209.45" cy="93.81" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="144.96" cy="74.57" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="167.06" cy="136.14" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="135.10" cy="119.97" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="148.68" cy="152.84" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="142.59" cy="113.27" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="162.60" cy="115.09" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="173.96" cy="158.36" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="159.81" cy="99.69" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="138.52" cy="93.10" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="154.14" cy="101.38" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="164.97" cy="108.24" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="143.45" cy="124.19" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="127.26" cy="137.33" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="202.04" cy="88.06" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="192.45" cy="76.91" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="115.06" cy="130.48" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="133.77" cy="140.68" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="146.19" cy="143.26" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="146.81" cy="129.86" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="126.30" cy="110.47" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="171.78" cy="113.69" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="119.37" cy="145.49" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="126.95" cy="113.04" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="149.41" cy="82.17" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="128.19" cy="150.12" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="135.62" cy="128.11" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="176.64" cy="142.34" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="146.58" cy="115.08" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="128.48" cy="133.30" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="159.63" cy="101.60" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="168.88" cy="106.89" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="139.34" cy="152.55" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="162.03" cy="109.51" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="176.11" cy="137.02" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="171.29" cy="100.47" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="129.91" cy="124.18" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="151.51" cy="139.39" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="111.15" cy="72.36" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="182.45" cy="156.89" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="133.62" cy="116.18" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="133.29" cy="149.25" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="160.62" cy="117.89" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="127.34" cy="130.33" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="137.21" cy="135.74" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="141.78" cy="101.50" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="156.53" cy="98.56" r="2.8" fill="#2d7a85" opacity=".78"/><circle cx="318.78" cy="232.02" r="2.8" fill="#af7243" opacity=".78"/><circle cx="342.69" cy="241.00" r="2.8" fill="#af7243" opacity=".78"/><circle cx="297.08" cy="213.62" r="2.8" fill="#af7243" opacity=".78"/><circle cx="325.80" cy="223.27" r="2.8" fill="#af7243" opacity=".78"/><circle cx="285.36" cy="201.78" r="2.8" fill="#af7243" opacity=".78"/><circle cx="311.53" cy="208.48" r="2.8" fill="#af7243" opacity=".78"/><circle cx="325.27" cy="209.36" r="2.8" fill="#af7243" opacity=".78"/><circle cx="299.36" cy="222.69" r="2.8" fill="#af7243" opacity=".78"/><circle cx="338.93" cy="242.96" r="2.8" fill="#af7243" opacity=".78"/><circle cx="282.39" cy="232.57" r="2.8" fill="#af7243" opacity=".78"/><circle cx="305.99" cy="214.25" r="2.8" fill="#af7243" opacity=".78"/><circle cx="303.41" cy="240.54" r="2.8" fill="#af7243" opacity=".78"/><circle cx="333.73" cy="219.17" r="2.8" fill="#af7243" opacity=".78"/><circle cx="314.08" cy="234.95" r="2.8" fill="#af7243" opacity=".78"/><circle cx="305.34" cy="212.91" r="2.8" fill="#af7243" opacity=".78"/><circle cx="332.27" cy="211.07" r="2.8" fill="#af7243" opacity=".78"/><circle cx="276.31" cy="214.93" r="2.8" fill="#af7243" opacity=".78"/><circle cx="357.52" cy="208.89" r="2.8" fill="#af7243" opacity=".78"/><circle cx="268.93" cy="206.67" r="2.8" fill="#af7243" opacity=".78"/><circle cx="359.60" cy="232.93" r="2.8" fill="#af7243" opacity=".78"/><circle cx="274.92" cy="262.29" r="2.8" fill="#af7243" opacity=".78"/><circle cx="340.21" cy="242.81" r="2.8" fill="#af7243" opacity=".78"/><circle cx="286.23" cy="237.19" r="2.8" fill="#af7243" opacity=".78"/><circle cx="377.79" cy="187.76" r="2.8" fill="#af7243" opacity=".78"/><circle cx="308.87" cy="202.45" r="2.8" fill="#af7243" opacity=".78"/><circle cx="340.52" cy="219.96" r="2.8" fill="#af7243" opacity=".78"/><circle cx="359.98" cy="194.12" r="2.8" fill="#af7243" opacity=".78"/><circle cx="347.32" cy="249.81" r="2.8" fill="#af7243" opacity=".78"/><circle cx="312.92" cy="222.40" r="2.8" fill="#af7243" opacity=".78"/><circle cx="312.12" cy="247.02" r="2.8" fill="#af7243" opacity=".78"/><circle cx="310.55" cy="216.69" r="2.8" fill="#af7243" opacity=".78"/><circle cx="326.14" cy="234.60" r="2.8" fill="#af7243" opacity=".78"/><circle cx="306.62" cy="257.52" r="2.8" fill="#af7243" opacity=".78"/><circle cx="348.35" cy="245.73" r="2.8" fill="#af7243" opacity=".78"/><circle cx="310.29" cy="204.34" r="2.8" fill="#af7243" opacity=".78"/><circle cx="284.05" cy="216.49" r="2.8" fill="#af7243" opacity=".78"/><circle cx="343.73" cy="204.22" r="2.8" fill="#af7243" opacity=".78"/><circle cx="316.56" cy="219.51" r="2.8" fill="#af7243" opacity=".78"/><circle cx="292.94" cy="218.37" r="2.8" fill="#af7243" opacity=".78"/><circle cx="322.06" cy="201.39" r="2.8" fill="#af7243" opacity=".78"/><circle cx="326.58" cy="213.59" r="2.8" fill="#af7243" opacity=".78"/><circle cx="347.52" cy="223.11" r="2.8" fill="#af7243" opacity=".78"/><circle cx="353.01" cy="181.54" r="2.8" fill="#af7243" opacity=".78"/><circle cx="306.80" cy="231.27" r="2.8" fill="#af7243" opacity=".78"/><circle cx="315.42" cy="201.95" r="2.8" fill="#af7243" opacity=".78"/><circle cx="334.79" cy="251.20" r="2.8" fill="#af7243" opacity=".78"/><circle cx="335.10" cy="225.68" r="2.8" fill="#af7243" opacity=".78"/><circle cx="314.83" cy="245.91" r="2.8" fill="#af7243" opacity=".78"/><circle cx="297.81" cy="225.58" r="2.8" fill="#af7243" opacity=".78"/><circle cx="334.07" cy="262.01" r="2.8" fill="#af7243" opacity=".78"/><circle cx="278.33" cy="229.37" r="2.8" fill="#af7243" opacity=".78"/><circle cx="312.10" cy="268.41" r="2.8" fill="#af7243" opacity=".78"/><circle cx="318.04" cy="234.26" r="2.8" fill="#af7243" opacity=".78"/><circle cx="287.62" cy="200.96" r="2.8" fill="#af7243" opacity=".78"/><circle cx="320.72" cy="219.51" r="2.8" fill="#af7243" opacity=".78"/><circle cx="283.26" cy="239.90" r="2.8" fill="#af7243" opacity=".78"/><circle cx="291.42" cy="202.91" r="2.8" fill="#af7243" opacity=".78"/><circle cx="333.57" cy="240.27" r="2.8" fill="#af7243" opacity=".78"/><circle cx="288.49" cy="232.98" r="2.8" fill="#af7243" opacity=".78"/><circle cx="316.04" cy="259.13" r="2.8" fill="#af7243" opacity=".78"/><circle cx="464.67" cy="127.37" r="2.8" fill="#77689a" opacity=".78"/><circle cx="458.17" cy="126.65" r="2.8" fill="#77689a" opacity=".78"/><circle cx="469.98" cy="122.76" r="2.8" fill="#77689a" opacity=".78"/><circle cx="438.97" cy="117.98" r="2.8" fill="#77689a" opacity=".78"/><circle cx="485.51" cy="133.30" r="2.8" fill="#77689a" opacity=".78"/><circle cx="462.63" cy="95.78" r="2.8" fill="#77689a" opacity=".78"/><circle cx="436.69" cy="97.20" r="2.8" fill="#77689a" opacity=".78"/><circle cx="433.95" cy="85.31" r="2.8" fill="#77689a" opacity=".78"/><circle cx="431.90" cy="110.49" r="2.8" fill="#77689a" opacity=".78"/><circle cx="471.80" cy="96.11" r="2.8" fill="#77689a" opacity=".78"/><circle cx="471.38" cy="131.34" r="2.8" fill="#77689a" opacity=".78"/><circle cx="453.97" cy="99.66" r="2.8" fill="#77689a" opacity=".78"/><circle cx="493.09" cy="106.93" r="2.8" fill="#77689a" opacity=".78"/><circle cx="493.89" cy="150.28" r="2.8" fill="#77689a" opacity=".78"/><circle cx="475.29" cy="119.54" r="2.8" fill="#77689a" opacity=".78"/><circle cx="494.27" cy="122.55" r="2.8" fill="#77689a" opacity=".78"/><circle cx="491.18" cy="87.13" r="2.8" fill="#77689a" opacity=".78"/><circle cx="492.57" cy="118.98" r="2.8" fill="#77689a" opacity=".78"/><circle cx="505.29" cy="103.24" r="2.8" fill="#77689a" opacity=".78"/><circle cx="468.40" cy="122.11" r="2.8" fill="#77689a" opacity=".78"/><circle cx="436.76" cy="83.23" r="2.8" fill="#77689a" opacity=".78"/><circle cx="487.68" cy="100.04" r="2.8" fill="#77689a" opacity=".78"/><circle cx="489.54" cy="81.04" r="2.8" fill="#77689a" opacity=".78"/><circle cx="448.84" cy="100.19" r="2.8" fill="#77689a" opacity=".78"/><circle cx="489.46" cy="129.12" r="2.8" fill="#77689a" opacity=".78"/><circle cx="480.76" cy="114.59" r="2.8" fill="#77689a" opacity=".78"/><circle cx="433.12" cy="66.89" r="2.8" fill="#77689a" opacity=".78"/><circle cx="417.64" cy="88.46" r="2.8" fill="#77689a" opacity=".78"/><circle cx="463.69" cy="101.55" r="2.8" fill="#77689a" opacity=".78"/><circle cx="520.75" cy="134.18" r="2.8" fill="#77689a" opacity=".78"/><circle cx="448.61" cy="117.18" r="2.8" fill="#77689a" opacity=".78"/><circle cx="437.04" cy="113.62" r="2.8" fill="#77689a" opacity=".78"/><circle cx="454.14" cy="150.32" r="2.8" fill="#77689a" opacity=".78"/><circle cx="489.60" cy="107.89" r="2.8" fill="#77689a" opacity=".78"/><circle cx="471.77" cy="140.86" r="2.8" fill="#77689a" opacity=".78"/><circle cx="470.07" cy="100.42" r="2.8" fill="#77689a" opacity=".78"/><circle cx="446.52" cy="105.33" r="2.8" fill="#77689a" opacity=".78"/><circle cx="482.85" cy="82.45" r="2.8" fill="#77689a" opacity=".78"/><circle cx="502.12" cy="143.57" r="2.8" fill="#77689a" opacity=".78"/><circle cx="481.21" cy="115.86" r="2.8" fill="#77689a" opacity=".78"/><circle cx="453.09" cy="92.74" r="2.8" fill="#77689a" opacity=".78"/><circle cx="455.31" cy="105.40" r="2.8" fill="#77689a" opacity=".78"/><circle cx="458.61" cy="99.77" r="2.8" fill="#77689a" opacity=".78"/><circle cx="502.01" cy="117.29" r="2.8" fill="#77689a" opacity=".78"/><circle cx="473.35" cy="97.10" r="2.8" fill="#77689a" opacity=".78"/><circle cx="461.65" cy="159.17" r="2.8" fill="#77689a" opacity=".78"/><circle cx="490.18" cy="134.88" r="2.8" fill="#77689a" opacity=".78"/><circle cx="451.68" cy="103.51" r="2.8" fill="#77689a" opacity=".78"/><circle cx="454.65" cy="112.46" r="2.8" fill="#77689a" opacity=".78"/><circle cx="477.07" cy="126.25" r="2.8" fill="#77689a" opacity=".78"/><circle cx="516.46" cy="118.36" r="2.8" fill="#77689a" opacity=".78"/><circle cx="482.75" cy="110.96" r="2.8" fill="#77689a" opacity=".78"/><circle cx="497.77" cy="76.50" r="2.8" fill="#77689a" opacity=".78"/><circle cx="462.84" cy="95.28" r="2.8" fill="#77689a" opacity=".78"/><circle cx="503.35" cy="124.89" r="2.8" fill="#77689a" opacity=".78"/><circle cx="451.71" cy="147.77" r="2.8" fill="#77689a" opacity=".78"/><circle cx="432.62" cy="83.65" r="2.8" fill="#77689a" opacity=".78"/><circle cx="502.02" cy="78.17" r="2.8" fill="#77689a" opacity=".78"/><circle cx="423.64" cy="89.45" r="2.8" fill="#77689a" opacity=".78"/><circle cx="439.57" cy="96.94" r="2.8" fill="#77689a" opacity=".78"/></g>
+            <g class="demo-summary" aria-hidden="true"></g>
+            <g class="demo-centers" aria-hidden="true"><g transform="translate(149.36 118.75)"><circle r="11" fill="var(--paper)" stroke="#2d7a85" stroke-width="2"/><path d="M-4 0h8M0-4v8" fill="none" stroke="#2d7a85" stroke-width="2" stroke-linecap="round"/></g><g transform="translate(316.84 224.66)"><circle r="11" fill="var(--paper)" stroke="#af7243" stroke-width="2"/><path d="M-4 0h8M0-4v8" fill="none" stroke="#af7243" stroke-width="2" stroke-linecap="round"/></g><g transform="translate(471.13 109.58)"><circle r="11" fill="var(--paper)" stroke="#77689a" stroke-width="2"/><path d="M-4 0h8M0-4v8" fill="none" stroke="#77689a" stroke-width="2" stroke-linecap="round"/></g></g>
+          </svg>
+        </div>
+        <div class="demo-progress-track" aria-hidden="true"><div class="demo-progress"></div></div>
+        <div class="demo-stages" role="group" aria-label="Clustering explanation stages">
+          <button class="demo-step" type="button" aria-pressed="false" disabled><span class="step-number">01</span><span>Compress</span><small>Keep a weighted summary</small></button>
+          <button class="demo-step" type="button" aria-pressed="false" disabled><span class="step-number">02</span><span>Solve</span><small>Find centers on the summary</small></button>
+          <button class="demo-step" type="button" aria-pressed="true" disabled><span class="step-number">03</span><span>Lift</span><small>Cluster the original data</small></button>
+        </div>
+        <figcaption>
+          <p class="demo-caption" aria-live="polite" aria-atomic="true">Lift the solution back: use those centers to cluster every point in the original data.</p>
+          <p class="demo-note" id="demo-note">Illustrative data, not a benchmark. The summary is weighted; the goal is to preserve solution quality while solving a smaller problem.</p>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="publications" class="section shell" aria-labelledby="publications-heading">
+      <div class="section-heading">
+        <h2 id="publications-heading">Selected publications</h2>
+        <a class="text-link" href="https://scholar.google.com/citations?user=9NmU2NAAAAAJ&amp;hl=en">Full list on Scholar <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="selected-publications">
+        <article class="paper">
+          <p class="venue"><span>SODA · 2027</span><span class="paper-status">Accepted</span></p>
+          <div><h4>Coresets for Capacitated Clustering via Dual Concentration</h4><p>Milind Prabhu, Chris Schwiegelshohn, Sudarshan Shyam, Erik Waingarten</p></div>
+        </article>
+        <article class="paper">
+          <p class="venue"><span>NeurIPS · 2026</span><span class="paper-status">To appear</span></p>
+          <div><h4>Fault Tolerant Coresets</h4><p>Milind Prabhu, Chris Schwiegelshohn, Sudarshan Shyam</p></div>
+        </article>
+        <article class="paper">
+          <p class="venue">ICML · 2026</p>
+          <div><h4><a href="https://arxiv.org/abs/2606.17316">Approximation Preserving Coresets <span aria-hidden="true">↗</span></a></h4><p>Milind Prabhu, Chris Schwiegelshohn, Sudarshan Shyam</p></div>
+        </article>
+        <article class="paper">
+          <p class="venue">NeurIPS · 2025</p>
+          <div><h4><a href="https://papers.nips.cc/paper_files/paper/2025/hash/bc5d08497a00b419cfee286c8fe812bb-Abstract-Conference.html">Simple and Optimal Sublinear Algorithms for Mean Estimation <span aria-hidden="true">↗</span></a></h4><p>Beatrice Bertolotti, Matteo Russo, Chris Schwiegelshohn, Sudarshan Shyam</p></div>
+        </article>
+        <article class="paper">
+          <p class="venue">EC · 2023</p>
+          <div><h4><a href="https://arxiv.org/abs/2305.01339">Guaranteeing Envy-Freeness under Generalized Assignment Constraints <span aria-hidden="true">↗</span></a></h4><p>Siddharth Barman, Arindam Khan, Sudarshan Shyam, K. V. N. Sreenivas</p></div>
+        </article>
+      </div>
+      <details class="publications more-publications">
+        <summary><span>More publications &amp; submissions</span><span class="summary-indicator" aria-hidden="true"></span></summary>
         <div class="publication-list">
           <article class="paper">
-            <p class="venue">ICML · 2026</p>
-            <div><h4>Approximation Preserving Coresets</h4><p>With Milind Prabhu and Chris Schwiegelshohn</p></div>
-          </article>
-          <article class="paper">
             <p class="venue">AAMAS · 2026</p>
-            <div><h4>Existence and computation of fair allocations under constraints</h4><p>With Siddharth Barman and Ioannis Caragiannis</p></div>
-          </article>
-          <article class="paper">
-            <p class="venue">NeurIPS · 2025</p>
-            <div><h4>Simple and Optimal Sublinear Algorithms for Mean Estimation</h4><p>With Beatrice Bertolotti, Matteo Russo, and Chris Schwiegelshohn</p></div>
+            <div><h4>Existence and computation of fair allocations under constraints</h4><p>Siddharth Barman, Ioannis Caragiannis, Sudarshan Shyam</p></div>
           </article>
           <article class="paper">
             <p class="venue">SAGT · 2025</p>
-            <div><h4>A new lower bound for multi-color discrepancy with applications to fair division</h4><p>With Ioannis Caragiannis and Kasper Green Larsen</p></div>
+            <div><h4>A new lower bound for multi-color discrepancy with applications to fair division</h4><p>Ioannis Caragiannis, Kasper Green Larsen, Sudarshan Shyam</p></div>
           </article>
           <article class="paper">
             <p class="venue">AAAI · 2024</p>
-            <div><h4>Low-Distortion Clustering with Ordinal and Limited Cardinal Information</h4><p>With Jakob Burkhardt, Ioannis Caragiannis, Karl Fehrs, Matteo Russo, and Chris Schwiegelshohn</p></div>
-          </article>
-          <article class="paper">
-            <p class="venue">EC · 2023</p>
-            <div><h4>Guaranteeing Envy-Freeness under Generalized Assignment Constraints</h4><p>With Siddharth Barman, Arindam Khan, and K. V. N. Sreenivas</p></div>
+            <div><h4>Low-Distortion Clustering with Ordinal and Limited Cardinal Information</h4><p>Jakob Burkhardt, Ioannis Caragiannis, Karl Fehrs, Matteo Russo, Chris Schwiegelshohn, Sudarshan Shyam</p></div>
           </article>
           <article class="paper">
             <p class="venue">AAAI · 2023</p>
-            <div><h4>Finding fair allocations under budget constraints</h4><p>With Siddharth Barman, Arindam Khan, and K. V. N. Sreenivas</p></div>
+            <div><h4>Finding fair allocations under budget constraints</h4><p>Siddharth Barman, Arindam Khan, Sudarshan Shyam, K. V. N. Sreenivas</p></div>
           </article>
-          <article class="paper">
+          <article class="paper submission">
             <p class="venue">Under submission</p>
-            <div><h4>Coresets for Capacitated Clustering via Dual Concentration</h4><p>With Milind Prabhu</p></div>
+            <div><h4>Compress, Solve, and Lift: Coresets for Fair Division</h4><p>Milind Prabhu, Sudarshan Shyam</p></div>
           </article>
         </div>
       </details>
@@ -94,7 +143,7 @@
       <div class="prose">
         <p>I’m a computer scientist at King’s College London. I earned my PhD in Computer Science at Aarhus University, following a master’s at UC San Diego and a bachelor’s at IIT Kharagpur.</p>
         <p>Before my PhD, I worked as a software engineer at Microsoft and Amazon, on semantic search and distributed systems.</p>
-        <a class="text-link" href="sudarshan-shyam-cv.pdf">Read my CV <span class="link-note">PDF</span><span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="sudarshan-shyam-cv.pdf?v=founder-20261009">Read my CV <span class="link-note">PDF</span><span aria-hidden="true">↗</span></a>
       </div>
     </section>
 

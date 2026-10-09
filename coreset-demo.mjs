@@ -18,9 +18,9 @@ if (demo) {
   const duration = 10800;
   const boundaries = [0, 3600, 7600, duration];
   const descriptions = [
-    'Compress the data into a small weighted summary. Larger dots represent more points.',
-    'Solve the smaller k-means problem: the three cluster centers move into place.',
-    'Lift the solution back: use those centers to cluster every point in the original data.'
+    'Compress: keep representative points with weights.',
+    'Solve: fit cluster centers on the weighted summary.',
+    'Lift: assign every original point to its nearest center.'
   ];
   let elapsed = 0;
   let lastTime = null;

@@ -1,6 +1,6 @@
 // A deterministic toy dataset and weighted k-means example, not a benchmark.
-export const pointCount = 180;
-export const representativeCount = 15;
+export const pointCount = 1200;
+export const representativeCount = 24;
 
 export function makePoints() {
   let seed = 42;
@@ -10,9 +10,9 @@ export function makePoints() {
   };
   const spread = () => Array.from({ length: 6 }, random).reduce((a, b) => a + b, 0) - 3;
   const clusters = [
-    { x: 148, y: 116, sx: 37, sy: 29 },
-    { x: 318, y: 222, sx: 45, sy: 27 },
-    { x: 468, y: 111, sx: 35, sy: 31 }
+    { x: 148, y: 116, sx: 55, sy: 43 },
+    { x: 318, y: 222, sx: 50, sy: 42 },
+    { x: 468, y: 111, sx: 55, sy: 45 }
   ];
   return clusters.flatMap(cluster => Array.from({ length: pointCount / 3 }, () => ({
     x: Math.max(35, Math.min(565, cluster.x + spread() * cluster.sx)),

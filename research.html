@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#081820">
   <meta name="description" content="Coresets for scalable machine learning and optimization. Game theory, fair division, and resource allocation.">
+  
   <meta property="og:type" content="website">
   <meta property="og:title" content="Research — Sudarshan Shyam">
   <meta property="og:description" content="Coresets for scalable machine learning and optimization. Game theory, fair division, and resource allocation.">
   <meta property="og:url" content="https://sudarshanshy.github.io/research.html">
   <meta property="og:image" content="https://sudarshanshy.github.io/sudarshan-shyam.jpeg">
   <meta property="og:image:alt" content="Sudarshan Shyam by the sea">
+  <link rel="canonical" href="https://sudarshanshy.github.io/research.html">
   <title>Research — Sudarshan Shyam</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=navy-20261009-2">
@@ -62,7 +64,7 @@
       <noscript><p class="demo-note">Compress 1,200 points into 24 weighted representatives, solve k-means on that summary, then apply the three centers to every original point.</p></noscript>
     </figure>
     <div class="benefit-strip" aria-label="Why compress first">
-      <div class="benefit"><strong class="ratio">50<span>×</span></strong><div><h3>Fewer solver points</h3><p>24 instead of 1,200 per iteration</p></div></div>
+      <div class="benefit"><strong class="ratio">50<span>×</span></strong><div><h3>Cluster a smaller dataset</h3><p>Run k-means on 24 points instead of 1,200.</p></div></div>
       <div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m13 2-9 12h7l-1 8 10-12h-7l1-8Z"/></svg></span><div><h3>Faster algorithms</h3><p>Do the expensive work on less data</p></div></div>
       <div class="benefit"><span class="benefit-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="6" rx="2"/><rect x="4" y="14" width="16" height="6" rx="2"/><path d="M8 7h.01M8 17h.01m4-10h5m-5 10h5"/></svg></span><div><h3>Less memory</h3><p>A smaller working set for the solver</p></div></div>
     </div>
